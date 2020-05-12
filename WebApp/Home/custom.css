@@ -1,249 +1,122 @@
-body{margin-top:20px;}
+/***
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
 
-.member-details {
-    padding-top: 80px;
-    padding-bottom: 80px
+body {
+  background: #f1f3fa;
 }
 
-@media (min-width:992px) {
-    .member-details {
-        padding-top: 100px;
-        padding-bottom: 100px
-    }
+/* Profile container */
+.profile {
+  margin: 20px 0;
 }
 
-.member-details .member_designation {
-    margin-bottom: 30px
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
 }
 
-.member-details .member_designation h2 {
-    margin-bottom: 5px;
-    margin-top: 25px
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
 }
 
-@media (min-width:768px) {
-    .member-details .member_designation h2 {
-        margin-top: 0
-    }
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.member-details .member_designation span {
-    font-style: italic
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
 }
 
-.member-details .member_desc li {
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu .nav {
     display: block;
-    float: unset;
-    width: 100%
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
 }
 
-.member-details .member_desc li i {
-    color: #0cc652;
-    font-size: 14px
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
 }
 
-.member-details .member_desc h4 {
-    margin-top: 40px
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.member-details .member_desc p {
-    margin-top: 10px
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
 }
 
-.member-details .member_desc .progress-holder {
-    margin-top: 30px
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
 }
 
-.member-details .media-box {
-    margin-bottom: 20px
+.profile-usermenu ul li.active {
+  border-bottom: none;
 }
 
-@media (min-width:992px) {
-    .member-details .media-box {
-        margin-bottom: 0
-    }
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
 }
 
-.member-details .member_contact {
-    padding: 40px;
-    position: relative;
-    margin-top: 40px
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
 }
-
-.member-details .member_contact .media-icon {
-    font-size: 32px;
-    color: #dae0e6;
-    position: relative;
-    width: 30px;
-    text-align: center;
-    float: left;
-    margin-right: 15px
-}
-
-.member-details .member_contact .media-content {
-    padding-left: 0;
-    float: left
-}
-
-.member-details .member_contact .media-content h5 {
-    font-size: 15px
-}
-
-.member-details .member_contact .media-content h5,
-.member-details .member_contact .media-content a {
-    color: #dae0e6
-}
-
-@media (min-width:992px) {
-    .member-details .member_contact .social-icons {
-        text-align: right
-    }
-}
-
-.member-details .member_contact .social-icons .btn-social {
-    width: 40px;
-    height: 40px;
-    line-height: 40px
-}
-
-.member-details .member_contact .social-icons .btn {
-    background-color: transparent;
-    border: 1px solid;
-    border-color: #999;
-    color: #dae0e6
-}
-
-.member-details .member_contact .social-icons .btn:hover {
-    background-color: #0cc652;
-    border-color: #0cc652;
-    opacity: 1
-}
-
-.bg-image-holder,
-.bg-image {
-    background-size: cover!important;
-    background-position: 50% 0!important;
-    transition: all .3s linear;
-    background: #f5f5f6;
-    position: relative
-}
-
-.bg-image:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .7)
-}
-
-.bg-fixed {
-    background-attachment: fixed
-}
-
-.bg-image .overlay-content {
-    position: relative;
-    z-index: 5
-}
-
-
-.progress-holder {
-    margin-top: 50px
-}
-
-.progress-holder .barWrapper .progressText {
-    font-size: 15px;
-    color: #222
-}
-
-.progress-holder .progress {
-    margin-bottom: 25px;
-    margin-top: 10px;
-    overflow: visible;
-    background-color: #f5f5f6
-}
-
-.progress-holder .progress .progress-bar {
-    position: relative
-}
-
-.progress-holder .progress .progress-bar:after {
-    position: absolute;
-    content: '';
-    width: 1px;
-    height: 33px;
-    background-color: #0cc652;
-    top: -8px;
-    right: 0;
-    z-index: 55
-}
-
-.img-full {
-    width: 100%;
-    border-radius: 50%;
-}
-
-p {
-    color: #8b8e93;
-    font-weight: 300;
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 26px;
-}
-
-
-.styled_list {
-    margin-top: 15px;
-    position: relative;
-    display: inline-block
-}
-
-@media (min-width:768px) {
-    .styled_list {
-        margin-top: 15px
-    }
-}
-
-.styled_list li {
-    font-size: 14px;
-    line-height: 30px
-}
-
-@media (min-width:768px) {
-    .styled_list li {
-        font-size: 14px;
-        float: left;
-        width: 50%
-    }
-}
-
-.styled_list li i {
-    margin-right: 10px;
-    font-size: 12px
-}
-
-.styled_list li a {
-    color: #8b8e93
-}
-
-@media (min-width:768px) {
-    .styled_list li a {
-        font-size: 12px
-    }
-}
-
-@media (min-width:992px) {
-    .styled_list li a {
-        font-size: 14px
-    }
-}
-
-ol.styled_list {
-    margin-left: 15px
-}
-
-ol.styled_list li {
-    padding-left: 10px
-}
-     
