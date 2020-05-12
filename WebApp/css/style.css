@@ -186,7 +186,6 @@ h2 {
   font-size: 36px; }
 
 .main {
-  background: #f8f8f8;
   padding: 150px 0; }
 
 .clear {
@@ -296,12 +295,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-
-.signup {
-  margin-bottom: 150px; }
-
-.signup-content {
-  padding: 75px 0; }
 
 .signup-form, .signup-image, .signin-form, .signin-image {
   width: 70%;
@@ -497,10 +490,6 @@ label.valid {
 
 .material-icons-name {
   font-size: 18px; }
-
-.signin-content {
-  padding-top: 67px;
-  padding-bottom: 87px; }
 
 .social-login {
   align-items: center;

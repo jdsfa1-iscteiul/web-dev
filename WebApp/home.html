@@ -7,11 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link href="img/logo/logo.png" rel="icon">
+  <link href="img/logo_small.png" rel="icon">
   <title>BET STOCK</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.css" rel="stylesheet">
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/ruang-admin.min.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script>
+    $(document).ready(function () {
+      $('#dataTable').DataTable(); // ID From dataTable 
+      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+    });
+  </script>
 </head>
 
 <body id="page-top">
@@ -113,19 +133,19 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">João Figueira</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile.html">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="404.html">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Settings
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="login.html">
+                <a class="dropdown-item" href="signin.html">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -178,23 +198,23 @@
                 </div>
               </div>
             </div>
-            <!-- Invoice Example -->
+            <!-- DataTable with Hover -->
             <div class="col-xl-12 col-lg-7 mb-4">
               <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Invoice</h6>
-                  <a class="m-0 float-right btn btn-danger btn-sm" href="#">View More <i
-                      class="fas fa-chevron-right"></i></a>
+                  <h6 class="m-0 font-weight-bold text-primary">PSI 20</h6>
                 </div>
-                <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
+                <div class="table-responsive p-3">
+                  <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                     <thead class="thead-light">
                       <tr>
                         <th>Name</th>
                         <th>Last</th>
                         <th>Max</th>
                         <th>Min</th>
-                        <th>Action</th>
+                        <th>Variation</th>
+                        <th>Vol</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -203,40 +223,6 @@
                         <td>4,73</td>
                         <td>4,80</td>
                         <td>4,69</td>
-                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
-                            data-target="#modalLoginAvatar">Bet on this</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">BCP</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90' Edition</td>
-                        <td><span class="badge badge-warning">Shipping</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Corticeira Amorim</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Oblong T-Shirt</td>
-                        <td><span class="badge badge-danger">Pending</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">CTT Correios de Portugal</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>
-                        <td><span class="badge badge-info">Processing</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">EDP Renováveis</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Baby Powder</td>
-                        <td><span class="badge badge-success">Delivered</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Altri</a></td>
-                        <td>4,73</td>
                         <td>4,80</td>
                         <td>4,69</td>
                         <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
@@ -244,35 +230,49 @@
                       </tr>
                       <tr>
                         <td><a href="#">BCP</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90' Edition</td>
-                        <td><span class="badge badge-warning">Shipping</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">Corticeira Amorim</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Oblong T-Shirt</td>
-                        <td><span class="badge badge-danger">Pending</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">CTT Correios de Portugal</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>
-                        <td><span class="badge badge-info">Processing</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">EDP Renováveis</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Baby Powder</td>
-                        <td><span class="badge badge-success">Delivered</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">Altri</a></td>
                         <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
                         <td>4,80</td>
                         <td>4,69</td>
                         <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
@@ -280,35 +280,49 @@
                       </tr>
                       <tr>
                         <td><a href="#">BCP</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90' Edition</td>
-                        <td><span class="badge badge-warning">Shipping</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">Corticeira Amorim</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Oblong T-Shirt</td>
-                        <td><span class="badge badge-danger">Pending</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">CTT Correios de Portugal</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>
-                        <td><span class="badge badge-info">Processing</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">EDP Renováveis</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Baby Powder</td>
-                        <td><span class="badge badge-success">Delivered</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">Altri</a></td>
                         <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
                         <td>4,80</td>
                         <td>4,69</td>
                         <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
@@ -316,95 +330,135 @@
                       </tr>
                       <tr>
                         <td><a href="#">BCP</a></td>
-                        <td>Jaenab Bajigur</td>
-                        <td>Gundam 90' Edition</td>
-                        <td><span class="badge badge-warning">Shipping</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">Corticeira Amorim</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>Oblong T-Shirt</td>
-                        <td><span class="badge badge-danger">Pending</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">CTT Correios de Portugal</a></td>
-                        <td>Indri Junanda</td>
-                        <td>Hat Rounded</td>
-                        <td><span class="badge badge-info">Processing</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                       <tr>
                         <td><a href="#">EDP Renováveis</a></td>
-                        <td>Udin Cilok</td>
-                        <td>Baby Powder</td>
-                        <td><span class="badge badge-success">Delivered</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Altri</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">BCP</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">Corticeira Amorim</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CTT Correios de Portugal</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">EDP Renováveis</a></td>
+                        <td>4,73</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td>4,80</td>
+                        <td>4,69</td>
+                        <td><a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#modalLoginAvatar">Bet on this</a></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <div class="card-footer"></div>
               </div>
             </div>
-          </div>
 
-          <!--Modal: Login with Avatar Form-->
-          <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered cascading-modal modal-avatar modal-sm" role="document">
-              <!--Content-->
-              <div class="modal-content">
-
-                <!--Header-->
-                <div class="modal-header">
-                  <div class="rounded-circle img-responsive">
-                    <img src="img/altri.jpg" alt="avatar" style="margin-left: auto; margin-right: auto; width: 50%;">
-                  </div>
-                </div>
-                <!--Body-->
-                <div class="modal-body text-center mb-1">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-success"><i class="fas fa-rocket"></i> Going up</button>
-                    <button type="button" class="btn btn-danger"> Going down <i
-                        class="fas fa-heart-broken"></i></button>
-                  </div>
-                </div>
-                <!--/.Content-->
-              </div>
-            </div>
             <!--Modal: Login with Avatar Form-->
+            <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered cascading-modal modal-avatar modal-sm" role="document">
+                <!--Content-->
+                <div class="modal-content">
 
-
-            <!---Container Fluid-->
-          </div>
-          <!-- Footer -->
-          <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-              <div class="copyright text-center my-auto">
-                <span>copyright &copy;
-                  <script> document.write(new Date().getFullYear()); </script> - developed by
-                  <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
-                </span>
+                  <!--Header-->
+                  <div class="modal-header">
+                    <div class="rounded-circle img-responsive">
+                      <img src="img/altri.jpg" alt="avatar" style="margin-left: auto; margin-right: auto; width: 50%;">
+                    </div>
+                  </div>
+                  <!--Body-->
+                  <div class="modal-body text-center mb-1">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-success"><i class="fas fa-rocket"></i> Going up</button>
+                      <button type="button" class="btn btn-danger"> Going down <i
+                          class="fas fa-heart-broken"></i></button>
+                    </div>
+                  </div>
+                  <!--/.Content-->
+                </div>
               </div>
+              <!--Modal: Login with Avatar Form-->
+
+              <!---Container Fluid-->
             </div>
-          </footer>
-          <!-- Footer -->
+          </div>
         </div>
-      </div>
 
-      <!-- Scroll to top -->
-      <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-      </a>
-
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-      <script src="js/ruang-admin.min.js"></script>
-      <script src="vendor/chart.js/Chart.min.js"></script>
-      <script src="js/demo/chart-area-demo.js"></script>
+        <!-- Scroll to top -->
+        <a class="scroll-to-top rounded" href="#page-top">
+          <i class="fas fa-angle-up"></i>
+        </a>
 </body>
 
 </html>
